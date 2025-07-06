@@ -16,10 +16,10 @@ def create_app():
 
     db.init_app(app)
 
-    # Register blueprints
-    from app.routes.health import health_bp
+    # Register the main API blueprint
+    from app.routes import api_bp
 
-    app.register_blueprint(health_bp)
+    app.register_blueprint(api_bp)
 
     return app
 
